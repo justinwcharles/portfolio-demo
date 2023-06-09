@@ -5,11 +5,12 @@
 /* Overall */
 
 html {
-  
+  scroll-behavior: smooth;
 }
 
 body {
-  
+  background-color: #383838;
+  color: #faf9f6;
 }
 
 
@@ -40,4 +41,35 @@ p {
 
 a {
 
+}
+
+/* Nav */
+#nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#nav li {
+    display: inline-block;
+    font-size: 24; 
+    margin-right: 40px;   
+}
+
+#nav li:hover {
+    color: rgb(135, 0, 197);
+    transition-duration: 500ms;
+    transform: scale(2) rotate(360deg);
+    cursor: pointer;
+}
+
+#nav li:not(:hover) {
+    color: #faf9f6;
+    transition-duration: 500ms;
+  
+}
+
+/* Page Layout */
+.section {
+    min-height: 100vh;
 }
