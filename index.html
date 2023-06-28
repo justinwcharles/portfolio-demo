@@ -7,7 +7,7 @@
     <meta name="keywords" content="Design, UX, UI, Portfolio">
     <meta name="author" content="">
 
-    <!-- CSS / Styling -->   
+    <!-- CSS / Styling -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,98 +18,164 @@
 <body>
     <!-- Logo -->
     <div id="logo">
-        Justin Charles Design
+        <strong>Justin Charles</strong> Design
     </div>
 
     <!-- Nav Section -->
-    <ul id="nav">
-        <a href="#portfolio">
-                <li>Portfolio</li>
-        </a>
-        <a href="#bio">
-            <li>Bio</li>
-        </a>
-        <a href="#CV">
-            <li>CV</li>
-        </a>
-        <a href="#contact">
-            <li>Contact</li>
-        </a>
-    </ul>
+    <div id="hamburger" onclick="toggleNav()"></div>
 
-<!-- Hero Section -->
-    <div class="section">
+    <div id="navWrapper">
+        <ul id="nav">
+            <a href="#work" onclick="toggleNav()">
+                <li>Work</li>
+            </a>
+            <a href="#bio" onclick="toggleNav()">
+                <li>Bio</li>
+            </a>
+            <a href="#resume" onclick="toggleNav()">
+                <li>Resume</li>
+            </a>
+            <a href="#contact" onclick="toggleNav()">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="hero" class="section">
         <div id="heroText">
-            <h1 class="center-align">Justin Charles</h1>
-            <h1 class="center-align">UX/UI Designer</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m7 l7">
+                        <h1><strong>Hi there, I'm Justin!</strong></h1>
+                        <h1 style="color: #98FB98">I'm a UX/UI designer</h1>
+                        <h3>I'm passionate about simple, clean, human-centered design</h1>
+                    </div>
+                    <!-- <div class="gimmick"></div> -->
+
+                </div>
+            </div>
+
+            <a href="#work">
+                <div class="arrow"></div>
+            </a>
+
         </div>
     </div>
 
-<!-- Portfolio Section -->
-    <div id="portfolio" class="section">
-        
+    <!-- Work Section -->
+    <div id="work" class="section">
+
         <div class="container">
             <div class="row">
-                <h1 class="left-align">Portfolio</h1>
+                <h1 class="left-align">Work</h1>
 
-                <div class="col s12 m6 l4">
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
+                <div class="col s12 m6 l6">
+                    <div class="img-hover-zoom"><img class="materialboxed" src="images/project-preview.jpg"></div>
+                    <h3 class="center-align">Project Title A</h3>
+                    <br><br>
+                    <div class="img-hover-zoom"><img src="images/project-preview.jpg"></div>
+                    <h3 class="center-align">Project Title B</h3>
                 </div>
-                <div class="col s12 m6 l4">
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
+
+                <div class="col s12 m6 l6">
+                    <div class="img-hover-zoom"><img src="images/project-preview.jpg"></div>
+                    <h3 class="center-align">Project Title C</h3>
+                    <br><br>
+                    <div class="img-hover-zoom"><img src="images/project-preview.jpg"></div>
+                    <h3 class="center-align">Project Title D</h3>
                 </div>
-                <div class="col s12 m6 l4">
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
-                    <div class="caseStudy"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio Section -->
+    <div id="bio" class="section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+
+                </div>
+                <div class="col s12 m6 l6">
+
+
+                    <h1 class="left-align">About</h2>
+                    <h3>The intersection of art and technology is my jam</h3> 
+                    <p>After 13 years of progressive experience in the HR industry, I am thrilled to transition to a new and exciting career path that better aligns with my personality and interests.</p>
+
+                    <p>I've been passionate about the arts throughout my life, and I love learning about and building capability in photography, videography, and producing and DJing electronic music.  I'm also an avid gamer - I'm fascinated when teams of talented artistic and technical minds work together to create one cohesive experience.</p>
+                    
+                    <p>In this next chapter of my life, I'm focusing my passion for art and technology on solving UX/UI problems via human-centered design.  I love simple, clean designs that get the user to their destination without friction and maybe even with some joy along the way.</p>
+
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Bio Section -->
-<div id="bio" class="section">
+    <!-- Resume Section -->
+    <div id="resume" class="section">
+        <h2 class="center-align">Resume</h2>
+    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m6 l6">
-               
-                <h2 class="left-align">Bio</h2>    
-               
-                <p>This is authentic auto-biography sharing who I am, my background, what I'm passionate about, and my strengths as a designer. I might even share a bit of my philosophy!</p>
 
-                <p>This is authentic auto-biography sharing who I am, my background, what I'm passionate about, and my strengths as a designer. I might even share a bit of my philosophy!</p>
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2 class="center-align">Contact</h2>
+    </div>
 
-                <p>This is authentic auto-biography sharing who I am, my background, what I'm passionate about, and my strengths as a designer. I might even share a bit of my philosophy!</p>
-                
-            </div>
-            <div class="col s12 m6 l6">
-                <div class="caseStudy"></div>
-            </div>
+
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+
+
+
+    <a id="coloredButton" class="waves-effect waves-light btn" onclick="changeColor('coloredButton')">Click Me!</a>
+    <a id="coloredButton2" class="waves-effect waves-light btn" onclick="changeColor('coloredButton2')">Click Me!</a>
+    <a id="coloredButton3" class="waves-effect waves-light btn" onclick="changeColor('coloredButton3')">Click Me!</a>
+    <a id="coloredButton4" class="waves-effect waves-light btn" onclick="changeColor('coloredButton4')">Click Me!</a>
+    <a id="coloredButton5" class="waves-effect waves-light btn" onclick="changeColor('coloredButton5')">Click Me!</a>
+
+    <br><br><br><br>
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
-</div>
 
-<!-- CV Section -->
-<div id="CV" class="section">
-    <h2 class="center-align">CV</h2>
-</div>
+    <a id="coloredButton" class="waves-effect waves-light btn" onclick="createButton()">Click Me!</a>
+    <br><br><br><br>
 
+    <a id="coloredButton" class="waves-effect waves-light btn" onclick="createButton()">Click Me!</a>
+    <br><br><br><br>
 
-<!-- Contact Section -->
-<div id="contact" class="section">
-    <h2 class="center-align">Contact</h2>
-</div>
-
-    <a class="waves-effect waves-light btn">button</a>
 
 
     <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/main.js"></script>
-</body>  
+</body>
 
 </html>

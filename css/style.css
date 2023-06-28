@@ -1,5 +1,8 @@
 /* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 /* Variables */
@@ -11,24 +14,32 @@ html {
 }
 
 body {
-  background-color: #383838;
-  color: #faf9f6;
+  background-color: #2b2b2b;
+  color: #F4F5F4;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 20px;
 }
 
 
 /* Typography */ 
 h1 {
-    font-size: 64;
-    font-weight: 200;
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 64px;
        
 }
 
 h2 {
-
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 40px;
 }
 
 h3 {
-
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 32px;
 }
 
 h4 {
@@ -50,9 +61,9 @@ a {
 /* Logo */
 #logo {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24;
+    top: 40px;
+    left: 40px;
+    font-size: 32;
 }
 
 /* Nav */
@@ -64,21 +75,42 @@ a {
 
 #nav li {
     display: inline-block;
-    font-size: 24; 
+    font-size: 32; 
     margin-right: 40px;   
 }
 
 #nav li:hover {
-    color: rgb(135, 0, 197);
-    transition-duration: 500ms;
-    transform: scale(2) rotate(360deg);
+    color: #98FB98;
+    transition-duration: 200ms;
+    transform: scale(1.2);
+    letter-spacing: 3px;
     cursor: pointer;
 }
 
 #nav li:not(:hover) {
     color: #faf9f6;
-    transition-duration: 500ms;
+    transition-duration: 200ms;
   
+}
+
+#navWrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0);
+
+}
+
+#hamburger {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background-image: url('../images/icons/hamburger.svg');
+    z-index: 2;
+    display: none;
+    cursor: pointer;
 }
 
 
@@ -87,11 +119,51 @@ a {
     margin-top: 40vh;
 }
 
+#hero {
+    background: radial-gradient(82.65% 51.58% at 38.45% 51.58%, #555 0%, rgba(43, 43, 43, 0.00) 100%);}
+
+
+
+.arrow {
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/icons/arrow-down.svg');
+    position: absolute;
+    top: 90vh;
+    left: calc(50vw - 20px);
+}
+
+
+.img-hover-zoom {
+    overflow: hidden;
+   
+}
+
+
+
+.section img {
+    width: 100%;
+}
+
+
+.section img:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    transition: transform .5s ease;
+    cursor: pointer;
+    
+}
+
+.section img:not(hover) {
+    transform: scale(1);
+    transition-duration: 500ms;
+    
+}
+
 #bio {
-    background-image: url('../images/bio-bg.jpg');
+    background-image: url('../images/JWC06222.jpg');
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 /* Page Layout */
@@ -104,4 +176,64 @@ a {
     height: 400px;
     width: 100%;
     margin-bottom: 20px;
+}
+
+/* Gimmick */
+.gimmick {
+    background-image: url('../images/hero-bg.svg');
+    background-size: cover;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    top: calc(50vh - 400px);
+    left: calc(50vw - 400px);
+    animation-name: spin;
+    animation-duration: 2s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(5);
+    }
+}
+
+
+/* Change look and feel for smaller screen sizes */
+@media only screen and (max-width: 768px) {
+
+    #nav {
+        top: 20vh;
+        right: calc(50vw - 100px);
+    }
+
+    #nav li {
+        display: block;
+        text-align: left;
+    }
+
+    #navWrapper {
+        background-color: rgba(0,0,0,0.2);
+        backdrop-filter: blur(30px);
+        z-index: -1;
+        opacity: 0;
+        transition-duration: 500ms;
+
+    }
+
+    #navWrapper.active {
+        z-index: 1;
+        opacity: 1;
+        transition-duration: 500ms;
+    }
+
+    #hamburger {
+        display: block;
+    }    
+
+    #hamburger.active {
+        background-image: url('../images/icons/x.svg');
+    }        
 }
