@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
   //String
   let variableName = "red";
 
+
+
+
+
+
 //Turn buttons red
   function changeColor(elementID) {
     document.getElementById(elementID).style.backgroundColor="#ff0000";
