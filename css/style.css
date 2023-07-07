@@ -6,6 +6,11 @@
 
 
 /* Variables */
+:root {
+    --green: #98FB98;
+    --white: #F4F5F4;
+    --black: #1c1c1c;
+  }
 
 /* Overall */
 
@@ -34,6 +39,8 @@ h2 {
     font-family: "Poppins";
     font-weight: 100;
     font-size: 40px;
+    color: var(--green);
+
 }
 
 h3 {
@@ -43,7 +50,9 @@ h3 {
 }
 
 h4 {
-
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 24px;
 }
 
 h5 {
@@ -57,6 +66,30 @@ p {
 a {
 
 }
+
+
+/* Buttons */
+.button {
+    border-radius: 8px;
+    background: linear-gradient(135deg, #98FB98 0%, #F4F5F4 93.75%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-weight: 400;
+}
+
+.button:hover {
+    background: var(--bright-green, linear-gradient(180deg, #98FB98 0%, #94F394 100%));
+    box-shadow: 0px 4.4px 33px 0px rgba(152, 251, 152, 0.25);
+
+}
+
+
 
 /* Logo */
 #logo {
@@ -75,6 +108,12 @@ a {
 
 }
 
+
+#nav ul {
+    color: var(--white);
+}
+
+
 #nav li {
     display: inline-block;
     font-size: 40; 
@@ -82,7 +121,7 @@ a {
 }
 
 #nav li:hover {
-    color: #98FB98;
+    color: var(--green);
     transition-duration: 200ms;
     transform: scale(1.2);
     letter-spacing: 3px;
@@ -90,7 +129,7 @@ a {
 }
 
 #nav li:not(:hover) {
-    color: #faf9f6;
+    color: var(--white);
     transition-duration: 200ms;
   
 }
@@ -142,6 +181,11 @@ a {
     left: calc(50vw - 20px);
 }
 
+/* .caseStudyDescription {
+    margin-top: 100px;
+} */
+
+
 
 .img-hover-zoom {
     overflow: hidden;
@@ -152,21 +196,26 @@ a {
 
 .section img {
     width: 100%;
+    border-radius: 15px;
+
+
 }
 
 
 .section img:hover {
+    filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, 0.25));
     transform: scale(1.1);
     transition-duration: 500ms;
     transition: transform .5s ease;
     cursor: pointer;
-    
+
 }
 
 .section img:not(hover) {
     transform: scale(1);
     transition-duration: 500ms;
-    
+    filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, 0));
+
 }
 
 #bio {
@@ -175,17 +224,24 @@ a {
     background-attachment: fixed;
 }
 
+.bioText {
+    margin-top: 100px;
+    text-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.90);
+
+}
+
 /* Page Layout */
 .section {
     min-height: 100vh;
 }
 
-.caseStudy {
-    background-color: red;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 20px;
+#work .row {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    
 }
+
+
 
 /* Gimmick */
 .gimmick {
@@ -199,6 +255,23 @@ a {
     animation-name: spin;
     animation-duration: 2s;
 }
+
+
+/* Resume Section */
+
+#resume ul {
+    margin-top: 5px;
+}
+
+#resume li {
+    list-style-type: disc;
+    margin-left: 50px;
+    font-size: 16px;
+}
+
+
+
+
 
 @keyframes spin {
     from {
@@ -245,4 +318,8 @@ a {
     #hamburger.active {
         background-image: url('../images/icons/x.svg');
     }        
+
+    .caseStudyDescription {
+        margin-top: 0px;
+    }
 }
