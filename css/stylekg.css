@@ -47,6 +47,7 @@ h3 {
     font-weight: 100;
     font-size: 32px;
     color: var(--green);
+    font-weight: 200;
 }
 
 h4 {
@@ -92,10 +93,12 @@ a {}
 /* Page Layout */
 .section {
     min-height: 100vh;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
-
+.container {
+    margin-top: 100px;
+}
 
 
 /* Images */
@@ -181,7 +184,7 @@ a {}
 /* Logo */
 #logo {
     position: fixed;
-    top: 52px;
+    top: 32px;
     left: 40px;
     font-size: 32;
 }
@@ -189,6 +192,7 @@ a {}
 #logo h3 {
     color:var(--white);
     transition-duration: 200ms;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
 
 }
 
@@ -203,7 +207,7 @@ a {}
 /* Nav */
 #nav {
     position: fixed;
-    top: 20px;
+    top: 0px;
     right: 20px;
     /* backdrop-filter: blur(10px); */
 
@@ -212,7 +216,8 @@ a {}
 
 #nav h2 {
     color: var(--white);
-
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
+    
 }
 
 
@@ -221,7 +226,6 @@ a {}
     font-size: 40;
     margin-right: 40px;
     transition-duration: 200ms;
-    text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.95);
 
 }
 
@@ -229,11 +233,13 @@ a {}
     transform: scale(1.2);
     /* letter-spacing: 10px; */
     cursor: pointer;
+    
 
 }
 
 #nav li:hover h2 {
     color: var(--green);
+    font-weight: 200;
 
 }
 
@@ -264,15 +270,18 @@ a {}
 
 }
 
-#caseStudyNav li {
+#caseStudyNav li h4 {
     color: var(--white);
     transition-duration: 200ms;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.50);
+
 }
 
 #caseStudyNav li:hover h4 {
     color: var(--green);
     transform: scale(1.2);
     transition-duration: 200ms;
+    font-weight: 150;
 
 
 }
@@ -280,30 +289,33 @@ a {}
 /* Hero Section */
 
 #hero {
-    background: radial-gradient(73.62% 45.95% at 50.00% 45.95%, #FFF 0%, rgba(43, 43, 43, 0.00) 100%);    
-
+    background: radial-gradient(73.62% 45.95% at 50.00% 45.95%, rgba(255, 255, 255, 0.25) 0%, rgba(43, 43, 43, 0.00) 100%);
     /* background-size: 90% 90%;
     background-repeat: no-repeat;
     background-position: center center; */
 }
 
 .heroImage {
-    background-image: url('../images/kg_hero.png');
-    position: absolute;
-    margin-top: 20vh;
+    
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-bottom: -100px;
+    width: 60%;
+    height: 60%;
+    filter: drop-shadow(0px 16px 21px rgba(0, 0, 0, 0.75));
+
     
 }
 
 .heroText {
     top: 90vh;
-    
     margin-bottom: 0px;
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.50);
 
-    text-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.30);
+}
+
+.heroText h1 {
 }
 
 .arrow {
@@ -337,7 +349,6 @@ a {}
 
 #brief .row {
     margin-top: 50px;
-    
 
 }
 
@@ -395,10 +406,29 @@ iframe.figmaEmbed {
 }
 
 
+
+/* Other work */
 #otherCaseStudies {
     background-color: var(--black);
 }
 
+#otherCaseStudies img {
+    filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+
+}
+
+#otherCaseStudies img:hover {
+    filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, 0.25));
+
+}
+
+
+
+#otherCaseStudies .container {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
 
 @keyframes spin {
     from {
