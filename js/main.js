@@ -27,6 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let variableName = "red";
 
 
+  //Image Expander
+  var image = document.querySelector('.image');
+var imageContainer = document.querySelector('.imageContainer');
+
+imageContainer.addEventListener('click', function() {
+  image.classList.toggle('expanded');
+});
 
 
 

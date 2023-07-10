@@ -10,29 +10,29 @@
     --green: #98FB98;
     --white: #F4F5F4;
     --black: #1c1c1c;
-  }
+}
 
 /* Overall */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: #2b2b2b;
-  color: #F4F5F4;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 20px;
+    background-color: #2b2b2b;
+    color: #F4F5F4;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 20px;
 }
 
 
-/* Typography */ 
+/* Typography */
 h1 {
     font-family: "Poppins";
     font-weight: 100;
     font-size: 64px;
-       
+
 }
 
 h2 {
@@ -55,17 +55,11 @@ h4 {
     font-size: 24px;
 }
 
-h5 {
+h5 {}
 
-}
+p {}
 
-p {
-
-}
-
-a {
-
-}
+a {}
 
 .regular {
     font-weight: 200;
@@ -88,8 +82,10 @@ a {
 }
 
 .buttons:hover {
-    background: white;
-
+    border-radius: 25px;
+    background: var(--dark-gray, #2B2B2B);
+    box-shadow: 0px 4.400000095367432px 33px 0px rgba(152, 251, 152, 0.5);
+    color: var(--green)
 }
 
 /* Page Layout */
@@ -129,7 +125,7 @@ a {
 
 #contact img {
     width: 100%;
-    cursor:default;
+    cursor: default;
 
 }
 
@@ -169,8 +165,8 @@ a {
 
 #nav li {
     display: inline-block;
-    font-size: 40; 
-    margin-right: 40px;   
+    font-size: 40;
+    margin-right: 40px;
     transition-duration: 200ms;
 }
 
@@ -188,9 +184,8 @@ a {
 
 #navWrapper {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0);
+
+    background-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -217,7 +212,7 @@ a {
 }
 
 #hero {
-    background: radial-gradient(75.04% 46.83% at 38.45% 51.58%, #555 0%, rgba(43, 43, 43, 0.00) 100%);    
+    background: radial-gradient(75.04% 46.83% at 38.45% 51.58%, #555 0%, rgba(43, 43, 43, 0.00) 100%);
     /* background-size: 90% 90%;
     background-repeat: no-repeat;
     background-position: center center; */
@@ -257,9 +252,16 @@ a {
 #work .row {
     margin-top: 200px;
     margin-bottom: 400px;
-    
+
 }
 
+#KGtext {
+    order: 1;
+}
+
+#KGimage {
+    order: 2;
+}
 
 
 /* Bio Section */
@@ -310,6 +312,7 @@ a {
     from {
         transform: rotate(0deg) scale(1);
     }
+
     to {
         transform: rotate(360deg) scale(5);
     }
@@ -330,12 +333,13 @@ a {
     }
 
     #navWrapper {
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(30px);
         z-index: -1;
         opacity: 0;
         transition-duration: 500ms;
-
+        height: 100vh;
+        width: 100vw;
     }
 
     #navWrapper.active {
@@ -346,13 +350,21 @@ a {
 
     #hamburger {
         display: block;
-    }    
+    }
 
     #hamburger.active {
         background-image: url('../images/icons/x.svg');
-    }        
+    }
 
     .caseStudyDescription {
         margin-top: 0px;
+    }
+
+    #KGtext {
+        order: 2;
+    }
+    
+    #KGimage {
+        order: 1;
     }
 }

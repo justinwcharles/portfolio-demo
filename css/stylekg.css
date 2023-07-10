@@ -1,0 +1,458 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Variables */
+:root {
+    --green: #98FB98;
+    --white: #F4F5F4;
+    --black: #1c1c1c;
+}
+
+/* Overall */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2b2b2b;
+    color: #F4F5F4;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+/* Typography */
+h1 {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 64px;
+
+}
+
+h2 {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 40px;
+
+}
+
+h3 {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 32px;
+    color: var(--green);
+}
+
+h4 {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 24px;
+    
+}
+
+h5 {}
+
+p {}
+
+a {}
+
+.regular {
+    font-weight: 200;
+}
+
+/* Buttons */
+.buttons {
+    border-radius: 8px;
+    background: linear-gradient(135deg, #98FB98 0%, #C3F4C3 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-weight: 400;
+
+}
+
+.buttons:hover {
+    border-radius: 25px;
+    background: var(--dark-gray, #2B2B2B);
+    box-shadow: 0px 4.400000095367432px 33px 0px rgba(152, 251, 152, 0.5);
+    color: var(--green)
+}
+
+/* Page Layout */
+.section {
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+
+
+
+/* Images */
+
+/* .img-hover-zoom {
+    overflow: hidden;
+  
+} */
+
+.section img {
+    width: 100%;
+    border-radius: 15px;
+    transform: scale(1);
+    transition-duration: 500ms;
+    filter: drop-shadow(0px 4px 10px rgba(28, 28, 28, .75));
+
+}
+
+
+.section img:hover {
+    /* filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, .75)); */
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    transition: transform .5s ease;
+    /* cursor: default; */
+
+}
+
+.imageContainer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    
+  }
+
+ .image {
+    transition: transform 0.3s ease;
+
+ }
+
+ 
+
+ .image.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 9999;
+  }
+
+  
+#hero img {
+    filter: drop-shadow(0px 4px 10px rgba(28, 28, 28, 0));
+    cursor:default;
+
+}
+
+#hero img:hover {
+    filter: drop-shadow(0px 4px 10px rgba(28, 28, 28, 0));
+
+}
+
+#contact img {
+    width: 100%;
+    cursor: default;
+
+}
+
+#contact img:hover {
+    filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, 0));
+    transform: scale(1);
+}
+
+#hero img:hover {
+    filter: drop-shadow(0px 0px 50px rgba(152, 251, 152, 0));
+    transform: scale(1);
+}
+
+
+
+/* Logo */
+#logo {
+    position: fixed;
+    top: 52px;
+    left: 40px;
+    font-size: 32;
+}
+
+#logo h3 {
+    color:var(--white);
+    transition-duration: 200ms;
+
+}
+
+#logo:hover h3 {
+    color:var(--green);
+    transform: scale(1.2);
+
+}
+
+
+
+/* Nav */
+#nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* backdrop-filter: blur(10px); */
+
+}
+
+
+#nav h2 {
+    color: var(--white);
+
+}
+
+
+#nav li {
+    display: inline-block;
+    font-size: 40;
+    margin-right: 40px;
+    transition-duration: 200ms;
+    text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.95);
+
+}
+
+#nav li:hover {
+    transform: scale(1.2);
+    /* letter-spacing: 10px; */
+    cursor: pointer;
+
+}
+
+#nav li:hover h2 {
+    color: var(--green);
+
+}
+
+
+#navWrapper {
+    position: fixed;
+
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+#hamburger {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background-image: url('../images/icons/hamburger.svg');
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+}
+
+#caseStudyNav {
+    position: fixed;
+    left: 40px;
+    top: 60vh;
+
+}
+
+#caseStudyNav li {
+    color: var(--white);
+    transition-duration: 200ms;
+}
+
+#caseStudyNav li:hover h4 {
+    color: var(--green);
+    transform: scale(1.2);
+    transition-duration: 200ms;
+
+
+}
+
+/* Hero Section */
+
+#hero {
+    background: radial-gradient(73.62% 45.95% at 50.00% 45.95%, #FFF 0%, rgba(43, 43, 43, 0.00) 100%);    
+
+    /* background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center center; */
+}
+
+.heroImage {
+    background-image: url('../images/kg_hero.png');
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.heroText {
+    top: 90vh;
+    
+    margin-bottom: 0px;
+
+    text-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.30);
+}
+
+.arrow {
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/icons/arrow-down.svg');
+    position: absolute;
+    top: 90vh;
+    left: calc(50vw - 20px);
+}
+
+
+
+/* Gimmick */
+.gimmick {
+    background-image: url('../images/hero-bg.svg');
+    background-size: cover;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    top: calc(50vh - 400px);
+    left: calc(50vw - 400px);
+    animation-name: spin;
+    animation-duration: 2s;
+}
+
+
+
+
+/* Brief Section */
+
+#brief .row {
+    margin-top: 50px;
+    
+
+}
+
+#brief {
+    background-color: var(--black);
+}
+
+
+
+/* Discovery & Def Section */
+
+#discovery li {
+    list-style-type: disc;
+    margin-left: 50px;
+    /* font-size: 16px; */
+}
+
+
+
+
+/* LoFi Section */
+
+#lofi ul {
+    margin-top: 5px;
+}
+
+#lofi li {
+    list-style-type: disc;
+    margin-left: 50px;
+    font-size: 16px;
+}
+
+
+/* Hi Fi Sectio */
+iframe.figmaEmbed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* margin-top: 3.2rem !important; */
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 10px rgba(28, 28, 28, .75));
+    border: none;
+}
+
+
+/* Contact Section */
+
+#socials img {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+#otherCaseStudies {
+    background-color: var(--black);
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(5);
+    }
+}
+
+
+/* Change look and feel for smaller screen sizes */
+@media only screen and (max-width: 768px) {
+
+    #nav {
+        top: 20vh;
+        right: calc(50vw - 100px);
+    }
+
+    #nav li {
+        display: block;
+        text-align: left;
+    }
+
+    #navWrapper {
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(30px);
+        z-index: -1;
+        opacity: 0;
+        transition-duration: 500ms;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #navWrapper.active {
+        z-index: 1;
+        opacity: 1;
+        transition-duration: 500ms;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #hamburger.active {
+        background-image: url('../images/icons/x.svg');
+    }
+
+    .caseStudyDescription {
+        margin-top: 0px;
+    }
+
+    #caseStudyNav {
+        display: none;
+    }
+}
