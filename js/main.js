@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     //Initializing MaterialBox aka Enlarge an IMG
    var materialBoxOptions = {
-        inDuration: 3000
+        inDuration: 200
     };
    var materialBox = document.querySelectorAll('.materialboxed');
    var materialBoxInitialize = M.Materialbox.init(materialBox, materialBoxOptions);

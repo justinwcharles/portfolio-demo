@@ -143,7 +143,7 @@ a {}
 /* Logo */
 #logo {
     position: fixed;
-    top: 32px;
+    top: 20px;
     left: 40px;
     font-size: 32;
     text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
@@ -162,12 +162,17 @@ a {}
 }
 
 
-#nav h2 {
+#nav h3 {
     color: var(--white);
     font-weight: 100;
 
 }
 
+#nav h3:hover {
+    color: var(--green);
+    font-weight: 100;
+
+}
 
 #nav li {
     display: inline-block;
@@ -182,10 +187,7 @@ a {}
     cursor: pointer;
 }
 
-#nav li:hover h2 {
-    color: var(--green);
-    font-weight: 200;
-}
+
 
 
 #navWrapper {
@@ -260,6 +262,8 @@ a {}
 
 }
 
+
+
 #KGtext {
     order: 1;
 }
@@ -325,7 +329,7 @@ a {}
 
 
 /* Change look and feel for smaller screen sizes */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
 
     #nav {
         top: 20vh;
@@ -336,6 +340,8 @@ a {}
         display: block;
         text-align: left;
     }
+
+
 
     #navWrapper {
         background-color: rgba(0, 0, 0, 0.2);
@@ -355,6 +361,7 @@ a {}
 
     #hamburger {
         display: block;
+        top: 35px;
     }
 
     #hamburger.active {
@@ -365,11 +372,5 @@ a {}
         margin-top: 0px;
     }
 
-    #KGtext {
-        order: 2;
-    }
     
-    #KGimage {
-        order: 1;
-    }
 }
