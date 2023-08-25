@@ -47,6 +47,7 @@ h3 {
     font-family: "Poppins";
     font-weight: 100;
     font-size: 32px;
+
 }
 
 h4 {
@@ -147,7 +148,7 @@ a {}
     left: 40px;
     font-size: 32;
     text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
-
+    z-index: 1;
 }
 
 
